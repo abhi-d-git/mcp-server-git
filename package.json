@@ -5,16 +5,18 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "cleaninstall": "rimraf node_modules dist && npm install",
-    "cleanbuild": "rimraf dist && npm run build",
-    "cleanstart": "rimraf dist && npm run build && npm run dev",
+    "clean": "rimraf dist",
+    "cleanall": "rimraf node_modules dist",
+    "cleaninstall": "npm run cleanall && npm install",
+    "cleanbuild": "npm run clean && npm run build",
+    "cleanstart": "npm run cleanbuild && npm run dev",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@abhinav-dev/mcp-platform-kit": "file:../mcp-platform-kit",
+    "@abhinav-dev/mcp-platform-kit": "1.0.0",
     "dotenv": "^17.4.2",
     "express": "^4.18.2",
     "zod": "^3.22.4"
