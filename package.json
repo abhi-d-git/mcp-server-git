@@ -1,5 +1,5 @@
 {
-  "name": "mcp-server-git",
+  "name": "@abhinav-dev/mcp-server-git",
   "version": "1.0.0",
   "description": "GitHub MCP server — repos, branches, PRs, commits",
   "type": "module",
